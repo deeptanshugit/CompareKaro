@@ -1,0 +1,6 @@
+.searchResults {
+    position: absolute;
+    width: 85%;
+    overflow-y: auto;
+    height: 200px;
+}

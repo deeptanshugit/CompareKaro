@@ -1,0 +1,31 @@
+.footer {
+  /* position: absolute;
+  bottom: 0; */
+  color: white;
+  width: 100vw;
+  height: 50vh;
+  margin-top: 3rem;
+}
+.footerIcon {
+  max-width: 35px;
+  max-height: 35px;
+  font-size: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+}
+.footerLogo {
+  width: 190px;
+  height: 90px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+ 
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+}

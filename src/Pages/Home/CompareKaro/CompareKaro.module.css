@@ -1,0 +1,51 @@
+.typing-body {
+    margin: 0px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ddd;
+  }
+  
+  .container {
+    margin-top: 50px;
+    width: 20%;
+    height: auto;
+  }
+  
+  .textTyping {
+    /* padding: 20px 30px; */
+    /* background: #f5f5f5; */
+    font-size: 20px;
+    font-family: monospace;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .textTyping p {
+    margin: 0px;
+    white-space: nowrap;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    animation: typing 1s steps(50, end) forwards, blink 1s infinite;
+  }
+  
+  @keyframes typing {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 15%;
+    }
+  }
+  
+  @keyframes blink {
+    0%,
+    100% {
+      border-right: 2px solid transparent;
+    }
+    50% {
+      border-right: 2px solid #222;
+    }
+  }
+  

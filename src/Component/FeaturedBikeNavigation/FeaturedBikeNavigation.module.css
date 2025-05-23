@@ -1,0 +1,43 @@
+.navItem {
+    color: aquamarine;
+  }
+  .navLink {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .navLink:focus,
+  .navLink:hover {
+    color: #00afa0;
+    border-bottom: 4px solid #00afa0 !important;
+  }
+  
+  .navLink.active {
+    color: #00afa0 !important;
+    font-size: 16px !important;
+    font-weight: 500;
+  }
+  .navLinkActive {
+    color: #00afa0 !important;
+    font-weight: bold;
+    border-bottom: 4px solid #00afa0 !important;
+  }
+  .nav {
+    border-bottom-color: #e1e1e1;
+    border-style: solid;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-width: 1px;
+    align-items: flex-start;
+    /* min-width: 50%; */
+    max-width: 50%;
+  }
+  
+  @media (max-width: 700px) {
+    .nav {
+      max-width: 100%;
+    }
+  }
+  
