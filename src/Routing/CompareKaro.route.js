@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import CompareKaroLayout from "../Layout/CompareKaro.layout";
-import Home from "../Pages/Home/HomePage"
 import Phone from "../Pages/PhoneComparison/Phone";
 import CompareKaro from "../Pages/Home/CompareKaro/CompareKaro";
 

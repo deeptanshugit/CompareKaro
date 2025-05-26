@@ -14,7 +14,6 @@ import BasicDetailsAccordian from "../../Component/BasicDetailAccordion/BasicDet
 import TabForComparisonNavigation from "../../Component/TabsForComparisonNavigation/TabsForComparisonNavigation";
 import CustomizedAccordions from "../../Component/ComparisonAccordion/ComparisonAccordion";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
