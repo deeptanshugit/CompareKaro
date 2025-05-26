@@ -59,7 +59,7 @@ const Phone = () => {
       try {
   
         const res = await axios.get(
-          `http://localhost:3001/api/v1/comparison`,
+          `https://evdekho-backend-7f6f8ecf5616.herokuapp.com/api/v1/comparison`,
           { params: { vehicle1, vehicle2 } }
         );
   
