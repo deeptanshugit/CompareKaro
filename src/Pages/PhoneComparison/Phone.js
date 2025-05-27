@@ -249,23 +249,6 @@ const Phone = () => {
           />
         </div>
       ))}
-
-      {/* <div id="colours">
-        <CustomizedAccordions
-          phoneSpecs={phoneSpecs?.filter((spec) => spec.type === "Colours")}
-          searchQuery={searchQuery}
-          rowRefs={rowRefs}
-          title="Colour"
-        />
-      </div>
-      <div id="images">
-        <CustomizedAccordions
-          phoneSpecs={phoneSpecs?.filter((spec) => spec.id === "Images")}
-          searchQuery={searchQuery}
-          rowRefs={rowRefs}
-          title="Images"
-        />
-      </div> */}
     </Container>
   );
 };
