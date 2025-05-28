@@ -101,7 +101,7 @@ export default function CompareCard({ vehicle1, vehicle2 }) {
             sx={{ px: 4, py: 1 }}
             onClick={() => {
               const slugify = (str) =>
-                str
+                str && str
                   .toLowerCase()
                   .replace(/[^a-z0-9]+/g, "-")
                   .replace(/(^-|-$)/g, "");
@@ -113,7 +113,7 @@ export default function CompareCard({ vehicle1, vehicle2 }) {
                 vehicle2
               )}`;
 
-              navigate(`/comparisons/phone/${vehicleSlug}`);
+              navigate(`/comparisons/vechiles/${vehicleSlug}`);
             }}
           >
             {vehicle1} vs {vehicle2}

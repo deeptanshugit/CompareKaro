@@ -11,7 +11,7 @@ const CompareKaroRoute = () => {
         <Routes>
           <Route element={<CompareKaroLayout />}>
             <Route path="/" element={<CompareKaro />}></Route>
-            <Route path="/comparisons/phones/:vehicleSlug" element={<Phone />} />
+            <Route path="/comparisons/vechiles/:vehicleSlug" element={<Phone />} />
             <Route path="/comparekaro" element={<CompareKaro />} />
           </Route>
         </Routes>
