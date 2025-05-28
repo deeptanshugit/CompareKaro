@@ -28,7 +28,7 @@ export default function CompareCard({ vehicle1, vehicle2 }) {
                 textAlign: "center",
               }}
             >
-              <CardMedia
+              {/* <CardMedia
                 component="img"
                 height="250"
                 image="/cb350.png"
@@ -42,7 +42,7 @@ export default function CompareCard({ vehicle1, vehicle2 }) {
                     transform: "scale(1.03)",
                   },
                 }}
-              ></CardMedia>
+              ></CardMedia> */}
               <Typography
                 variant="h5"
                 component="h3"
@@ -65,7 +65,7 @@ export default function CompareCard({ vehicle1, vehicle2 }) {
                 textAlign: "center",
               }}
             >
-              <CardMedia
+              {/* <CardMedia
                 component="img"
                 height="250"
                 image="/reclassic350.png"
@@ -79,7 +79,7 @@ export default function CompareCard({ vehicle1, vehicle2 }) {
                     transform: "scale(1.03)",
                   },
                 }}
-              ></CardMedia>
+              ></CardMedia> */}
               <Typography
                 variant="h5"
                 component="h3"
