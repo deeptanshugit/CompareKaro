@@ -1,8 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import CompareKaroLayout from "../Layout/CompareKaro.layout";
-import Phone from "../Pages/PhoneComparison/Phone";
 import CompareKaro from "../Pages/Home/CompareKaro/CompareKaro";
+import Bike from "../Pages/BikeComparison/Bike";
+import Demo from "../Pages/Demo/Demo";
+import BlogPost from "../Component/BlogPost/BlogPost";
 
 const CompareKaroRoute = () => {
   return (
@@ -11,8 +13,11 @@ const CompareKaroRoute = () => {
         <Routes>
           <Route element={<CompareKaroLayout />}>
             <Route path="/" element={<CompareKaro />}></Route>
-            <Route path="/comparisons/vechiles/:vehicleSlug" element={<Phone />} />
+            <Route path="/blog/:slug" element={<BlogPost />}></Route>
+            <Route path="/comparisons/vehicles/:vehicleSlug" element={<Bike />} />
             <Route path="/comparekaro" element={<CompareKaro />} />
+            <Route path="/demo" element={<Demo />} />
+
           </Route>
         </Routes>
       </Router>

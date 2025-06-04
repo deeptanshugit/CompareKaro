@@ -29,13 +29,8 @@ const Navbar = () => {
             <MenuIcon />
           </IconButton>
           <Box display="flex" alignItems="center">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/2/23/BikeWale-Logo.png"
-              alt="logo"
-              style={{ height: 24, marginRight: 4 }}
-            />
             <Typography variant="h6" noWrap sx={{ fontWeight: 'bold', color: '#000' }}>
-              bikewale
+              CompareKaro
             </Typography>
           </Box>
         </Box>

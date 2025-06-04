@@ -37,11 +37,6 @@ const Footer = () => {
             alignItems="flex-start"
             gap={2}
           >
-            <img
-              src="https://img.freepik.com/premium-vector/abstract-initial-letter-c-logo_740796-625.jpg" // replace with actual logo
-              alt="The Granite"
-              style={{ width: 50 }}
-            />
             <Typography
               className="d-flex flex-column"
               sx={{

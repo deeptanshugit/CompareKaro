@@ -1,21 +1,32 @@
+import React from "react";
 import {
-  Box,
   Card,
   CardContent,
   CardMedia,
-  Grid,
   Typography,
   Button,
+  Box,
+  Grid,
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 
-export default function CompareCard({ vehicle1, vehicle2 }) {
-  const navigate = useNavigate();
+const ProductCard = ({ products, onButtonClick, vehicle1, vehicle2 }) => {
+  const product = products[0]; // Since we're now passing single products
 
   return (
     <Card
-      variant="outlined"
-      sx={{ maxWidth: "70%", margin: "0 auto", borderRadius: 2 }}
+      sx={{
+        height: "100%",
+        display: "flex",
+        width: "100%",
+        flexDirection: "column",
+        borderRadius: 2,
+        boxShadow: 3,
+        transition: "transform 0.2s, box-shadow 0.2s",
+        "&:hover": {
+          transform: "translateY(-4px)",
+          boxShadow: 6,
+        },
+      }}
     >
       <CardContent>
         <Grid container spacing={1} sx={{ justifyContent: "space-between" }}>
@@ -30,8 +41,8 @@ export default function CompareCard({ vehicle1, vehicle2 }) {
             >
               <CardMedia
                 component="img"
-                height="250"
-                image="/Images/Bikes/RoyalEnfield/Classic 350 Transparent.png"
+                height="200"
+                image={product.image1}
                 sx={{
                   borderRadius: 1,
                   mb: 2,
@@ -49,10 +60,10 @@ export default function CompareCard({ vehicle1, vehicle2 }) {
                 gutterBottom
                 fontWeight="bold"
               >
-                Honda
+                {product.brand1}
               </Typography>
               <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
-                CB 350
+                {product.bike1}
               </Typography>
             </Box>
           </Grid>
@@ -67,8 +78,8 @@ export default function CompareCard({ vehicle1, vehicle2 }) {
             >
               <CardMedia
                 component="img"
-                height="250"
-                image="/Images/Bikes/HondaCB350/Honda CB350 Transparent.png"
+                height="200"
+                image={product.image2}
                 sx={{
                   borderRadius: 1,
                   mb: 2,
@@ -86,10 +97,10 @@ export default function CompareCard({ vehicle1, vehicle2 }) {
                 gutterBottom
                 fontWeight="bold"
               >
-                Royal Enfield
+                {product.brand2}
               </Typography>
               <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
-                Classic 350
+                {product.bike2}
               </Typography>
             </Box>
           </Grid>
@@ -101,26 +112,21 @@ export default function CompareCard({ vehicle1, vehicle2 }) {
             sx={{ px: 4, py: 1 }}
             onClick={() => {
               const slugify = (str) =>
-                str && str
+                str &&
+                str
                   .toLowerCase()
                   .replace(/[^a-z0-9]+/g, "-")
                   .replace(/(^-|-$)/g, "");
 
-              // const fullVehicle1 = "Honda CB350";
-              // const fullVehicle2 = "Royal Enfield Meteor 350";
-
-              const vehicleSlug = `${slugify(vehicle1)}-vs-${slugify(
-                vehicle2
-              )}`;
-
-              navigate(`/comparisons/vechiles/${vehicleSlug}`);
+              //   navigate(`/comparisons/vechiles/${vehicleSlug}`);
             }}
           >
             {vehicle1} vs {vehicle2}
           </Button>
         </Box>
-        
       </CardContent>
     </Card>
   );
-}
+};
+
+export default ProductCard;

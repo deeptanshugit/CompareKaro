@@ -8,7 +8,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import styles from "./Phone.module.css";
+import styles from "./Bike.module.css";
 import { useRef, useState } from "react";
 import BasicDetailsAccordian from "../../Component/BasicDetailAccordion/BasicDetailAccordion";
 import TabForComparisonNavigation from "../../Component/TabsForComparisonNavigation/TabsForComparisonNavigation";
@@ -19,16 +19,14 @@ import { useParams } from "react-router-dom";
 
 const vehicleTabs = [
   { name: "SPECIFICATIONS", href: "Specification" },
-  { name: "COLOURS", href: "Colours" },
-  { name: "IMAGES", href: "Images" },
-  { name: "HARDWARE", href: "hardware" },
-  { name: "SOFTWARE", href: "software" },
-  { name: "CONNECTIVITY", href: "connectivity" },
+  // { name: "COLOURS", href: "Colours" },
+  // { name: "IMAGES", href: "Images" },
+  // { name: "HARDWARE", href: "hardware" },
+  // { name: "SOFTWARE", href: "software" },
+  // { name: "CONNECTIVITY", href: "connectivity" },
 ];
 
-// var phoneSpecs=[]
-
-const Phone = () => {
+const Bike = () => {
   const { vehicleSlug } = useParams();
 
   const [vehicle1Slug, vehicle2Slug] = vehicleSlug.split("-vs-");
@@ -58,14 +56,14 @@ const Phone = () => {
       try {
   
         const res = await axios.get(
-          `https://evdekho-backend-7f6f8ecf5616.herokuapp.com/api/v1/comparison`,
+          `http://localhost:3001/api/v1/comparison/compare/search`,
           { params: { vehicle1, vehicle2 } }
         );
   
         console.log(res.data, "comparison result");
-        setPhoneSpecsData(res?.data[0]?.categories || []);
-        setDescription(res?.data[0]?.description || "")
-        setKeySpecs(res?.data[0].keySpecs || [])
+        setPhoneSpecsData(res?.data?.categories || []);
+        setDescription(res?.data?.description || "")
+        setKeySpecs(res?.data.keySpecs || [])
       } catch (err) {
         console.error("Failed to fetch comparison data", err);
       }
@@ -74,7 +72,6 @@ const Phone = () => {
     fetchComparisonData();
   }, [vehicle1, vehicle2]);
 
-  // const phoneSpecs = [
   //   {
   //     id: "Power & Performance",
   //     title: "Power & Peformance",
@@ -253,4 +250,4 @@ const Phone = () => {
   );
 };
 
-export default Phone;
+export default Bike;
