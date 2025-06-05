@@ -4,7 +4,6 @@ import { Typography, ThemeProvider, createTheme, CssBaseline } from "@mui/materi
 import { fontSize } from "../../../Theme/fontsize";
 import ProductCarousel from "../../../Component/ProductCarousel/ProductCarousel";
 import BlogList from "../../../Component/BlogList/BlogList";
-import BlogPost from "../../../Component/BlogPost/BlogPost";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
