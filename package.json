@@ -32,10 +32,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "vite",
+    "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "heroku-postbuild": "vite build",
+    "start": "serve -s dist"
   },
   "eslintConfig": {
     "extends": [
