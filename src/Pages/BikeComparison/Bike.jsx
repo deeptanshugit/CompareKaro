@@ -56,7 +56,7 @@ const Bike = () => {
       try {
   
         const res = await axios.get(
-          `http://localhost:3001/api/v1/comparison/compare/search`,
+          `https://evdekho-backend-7f6f8ecf5616.herokuapp.com/api/v1/comparison/compare/search`,
           { params: { vehicle1, vehicle2 } }
         );
   

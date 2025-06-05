@@ -9,7 +9,7 @@ const BlogPost = ({ onBack }) => {
   const [content, setContent] = useState("");
 
   useEffect(() => {
-    fetch(`${process.env.PUBLIC_URL}/blogs/${slug}.md`)
+    fetch(`/blogs/${slug}.md`)
       .then(res => res.text())
       .then(setContent);
   }, [slug]);
