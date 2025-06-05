@@ -27,6 +27,7 @@
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.6.0",
     "remark-gfm": "^4.0.1",
+    "serve": "^14.2.4",
     "source-map-explorer": "^2.5.3",
     "swiper": "^11.1.1",
     "web-vitals": "^2.1.4"
@@ -34,8 +35,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
     "heroku-postbuild": "vite build",
     "start": "serve -s dist"
   },
